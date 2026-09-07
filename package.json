@@ -1,0 +1,11 @@
+{
+  "name": "emre-can-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emre Can Kınalı kişisel portfolyo sitesi",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check script.js && node --check server.mjs"
+  }
+}
