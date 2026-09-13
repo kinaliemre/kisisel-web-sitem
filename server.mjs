@@ -3,6 +3,9 @@ import { readFile } from 'node:fs/promises';
 const files = new Map([
   ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
+  ['/hakkimda.html', ['hakkimda.html', 'text/html; charset=utf-8']],
+  ['/calismalar.html', ['calismalar.html', 'text/html; charset=utf-8']],
+  ['/iletisim.html', ['iletisim.html', 'text/html; charset=utf-8']],
   ['/style.css', ['style.css', 'text/css; charset=utf-8']],
   ['/script.js', ['script.js', 'text/javascript; charset=utf-8']],
   ['/favicon.svg', ['favicon.svg', 'image/svg+xml']],

@@ -3,62 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Emre Can Kınalı. Arel Üniversitesi bilgisayar mühendisliği öğrencisi. Benim dünyam, bugünüm ve yarın için düşündüklerim.">
-  <meta name="theme-color" content="#10121a">
-  <title>Emre Can Kınalı — Benim dünyam</title>
+  <meta name="description" content="Emre Can Kınalı’nın kişisel sayfası. Bilgisayar mühendisliği, öğrendiklerim ve üzerinde çalıştığım işler.">
+  <meta name="theme-color" content="#090b0c">
+  <title>Emre Can Kınalı — Kişisel sayfam</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/istanbul-blue.png" as="image">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body id="baslangic">
   <a class="skip" href="#main">İçeriğe geç</a>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-scene is-active" aria-hidden="true"></div>
-      <div class="hero-scene" aria-hidden="true"></div>
-      <div class="hero-shade" aria-hidden="true"></div>
-      <header class="header wrap">
-        <a class="logo" href="#baslangic" aria-label="Emre Can Kınalı, ana sayfa">EC<span>K.</span></a>
-        <nav aria-label="Ana menü"><a href="#ben">Benim dünyam</a><a href="#simdi">Şu sıralar</a><a href="#gelecek">Sırada ne var?</a></nav>
-        <a class="nav-contact" href="#iletisim">Tanışalım <span aria-hidden="true">↗</span></a>
-      </header>
-      <div class="hero-content wrap">
-        <div class="hero-kicker"><span><i class="dot"></i> MERAKLI BİR ZİHİN. KENDİNE AİT BİR YOL.</span><span>İSTANBUL / TR</span></div>
-        <h1 id="hero-title"><span>EMRE CAN</span><span class="surname">KINALI</span></h1>
-        <div class="hero-details"><p>Bir yanım mühendislik, bir yanım merak.<br>Aklımda fikirler, önümde yeni yollar.<br><strong>Ben Emre. Burası benim dünyam.</strong></p></div>
-      </div>
-      <div class="hero-bottom wrap"><span>AREL ÜNİVERSİTESİ <span class="separator">/</span> 3. SINIF</span><div class="scene-dots" role="group" aria-label="Arka plan fotoğrafı seç"><button type="button" class="scene-dot" data-scene="0" aria-label="İstanbul fotoğrafını göster" aria-pressed="true" title="İstanbul"></button><button type="button" class="scene-dot" data-scene="1" aria-label="Alpler fotoğrafını göster" aria-pressed="false" title="Alpler"></button><button type="button" class="scene-dot" data-scene="2" aria-label="Kyoto fotoğrafını göster" aria-pressed="false" title="Kyoto"></button><button type="button" class="scene-dot" data-scene="3" aria-label="İzlanda fotoğrafını göster" aria-pressed="false" title="İzlanda"></button><button type="button" class="scene-dot" data-scene="4" aria-label="New York fotoğrafını göster" aria-pressed="false" title="New York"></button><button type="button" class="scene-dot" data-scene="5" aria-label="Çalışma masası fotoğrafını göster" aria-pressed="false" title="Çalışma masası"></button></div><span class="hero-index">01 — BENİM DÜNYAM</span></div>
-    </section>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="ECK — Ana sayfa">ECK</a>
+      <nav aria-label="Ana menü">
+        <a href="index.html" aria-current="page">Ana sayfa.</a>
+        <a href="hakkimda.html">Hakkımda.</a>
+        <a href="calismalar.html">Çalışmalar.</a>
+        <a href="iletisim.html">İletişim.</a>
+      </nav>
+    </header>
 
-    <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><div class="ribbon-group"><span>BİRAZ MERAK</span><span>BİRAZ CESARET</span><span>BOLCA ÖĞRENME</span><span>TAMAMEN BEN</span></div><div class="ribbon-group ribbon-copy"><span>BİRAZ MERAK</span><span>BİRAZ CESARET</span><span>BOLCA ÖĞRENME</span><span>TAMAMEN BEN</span></div></div></div>
+    <main id="main">
+      <section class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title" class="intro-name">Emre Can Kınalı</h1>
+        <figure class="intro-quote">
+          <blockquote cite="https://clarkeinstitute.org/arthur-c-clarke/quotable-arthur-c-clarke/">
+            <p>“Yeterince gelişmiş her teknoloji,<br class="quote-break"> sihirden ayırt edilemez.”</p>
+          </blockquote>
+          <figcaption>Arthur C. Clarke</figcaption>
+        </figure>
+      </section>
+    </main>
 
-    <section id="ben" class="about wrap section" aria-labelledby="about-title">
-      <div class="photo-collage">
-        <figure class="photo photo-city"><img src="assets/istanbul-blue.png" alt="Mavi saatlerde İstanbul Boğazı; yapay zekâyla oluşturulmuş atmosfer görseli" width="1672" height="941" loading="lazy"></figure>
-        <figure class="photo photo-desk"><img src="assets/night-study.png" alt="Gece aydınlatılmış çalışma masası; yapay zekâyla oluşturulmuş atmosfer görseli" width="1024" height="1536" loading="lazy"></figure>
-        <span class="photo-sticker">work in<br><em>progress.</em> <span aria-hidden="true">↗</span></span>
-        <span class="collage-scribble" aria-hidden="true">benim küçük evrenim ↗</span>
-      </div>
-      <div class="about-copy"><p class="eyebrow">01 / EKRANIN DİĞER TARAFINDA</p><h2 id="about-title">Bir bölümden,<br>bir özgeçmişten<br><em>daha fazlası.</em></h2><p class="lead">Selam, ben Emre Can. Bir şeyin nasıl çalıştığını merak etmekle başlayıp “Ben olsam nasıl yapardım?” diye düşünürken buluyorum kendimi.</p><p>Arel Üniversitesi’nde bilgisayar mühendisliği 3. sınıf öğrencisiyim. Üniversite hayatı, aklıma takılan fikirler ve geleceğe dair planlar arasında kendi yönümü arıyorum.</p><p>Bu siteyi de kendimden bir parça bırakmak için hazırlıyorum. Nelerle uğraştığımı, aklımda neler olduğunu ve zamanla ortaya koyduğum işleri burada paylaşmak istiyorum.</p><div class="signature">Emre Can <span aria-hidden="true">↗</span></div></div>
-    </section>
+    <footer class="footer"><a class="brand footer-brand" href="index.html" aria-label="ECK — Ana sayfa">ECK</a></footer>
 
-    <section id="simdi" class="now-section" aria-labelledby="now-title"><div class="wrap section">
-      <div class="section-heading"><div><p class="eyebrow">02 / HAYAT ŞU AN</p><h2 id="now-title">Şu sıralar<br><em>ben.</em></h2></div><p class="side-caption"><i class="dot"></i> Tamamlanmış bir hikâye değil.<br>Devam eden bir yolculuk.</p></div>
-      <div class="now-grid"><article class="now-card education photo-backed"><img class="card-photo" src="assets/arel-campus.png" alt="İstanbul Arel Üniversitesi Tepekent Kemal Gözükara Yerleşkesi" loading="lazy"><div class="photo-card-shade" aria-hidden="true"></div><span class="card-label">HAYATIMIN BİR PARÇASI</span><div class="giant-number" aria-hidden="true">03<span>/04</span></div><h3>Öğrencilik devam.</h3><p>Arel Üniversitesi’nde bilgisayar mühendisliği üçüncü sınıftayım. Bugünümün önemli bir parçası dersler, yarınımın gündemi ise öğrendiklerimle neler yapabileceğim.</p></article>
-      <article class="now-card building"><img src="assets/night-study.png" alt="" loading="lazy" width="1024" height="1536"><div class="card-overlay"></div><div class="building-content"><span class="card-label">ŞU AN ÜZERİNDE ÇALIŞTIĞIM</span><div><h3>İnternette<br>kendime bir yer.</h3><p>Bu siteyi şekillendiriyorum. Bana benzeyen, benimle değişen bir alan.</p></div></div></article>
-      <article class="now-card curiosity photo-backed"><img class="card-photo" src="assets/iceland.png" alt="" loading="lazy" width="1672" height="941"><div class="photo-card-shade" aria-hidden="true"></div><span class="card-label">BENİ HAREKETE GEÇİREN</span><h3>“Peki, nasıl?”</h3><p>Bir uygulamanın arkasında ne var? Bir fikir nereden başlar? Bazen tek bir soru, peşinden gitmek istediğim yeni bir konuya dönüşüyor.</p></article></div>
-    </div></section>
-
-    <!-- Bu hedefler kişiselleştirilmek üzere hazırlanmış ilk taslak metinlerdir. -->
-    <section id="gelecek" class="future wrap section" aria-labelledby="future-title"><div class="future-intro"><p class="eyebrow">03 / HENÜZ YAZILMAMIŞ SAYFALAR</p><h2 id="future-title">Sırada<br><em>ne var?</em></h2><p>Aklımdaki fikirleri denemek,<br>ortaya bana ait işler koymak<br>ve severek çalışacağım alanı bulmak.</p><span class="drawn-arrow" aria-hidden="true">↴</span></div><div class="future-list">
-      <details open><summary><span class="step">01</span><span>Öğrendiğimi hayata geçirmek.</span><span class="expand" aria-hidden="true">+</span></summary><p>Bilgiyi yalnızca bilmekle bırakmayıp kendi çalışmalarımda kullanmak. Küçük de olsa çalışan bir şey ortaya koymak.</p></details>
-      <details><summary><span class="step">02</span><span>Kendi alanımı keşfetmek.</span><span class="expand" aria-hidden="true">+</span></summary><p>Farklı konuları deneyerek hangi alanda daha çok çalışmak istediğimi anlamak. Merak ettiğim konulara zaman ayırmak.</p></details>
-      <details><summary><span class="step">03</span><span>Daha iyi bir mühendis olmak.</span><span class="expand" aria-hidden="true">+</span></summary><p>Problemleri anlayabilen, çözüm üretebilen ve yaptığı işin sorumluluğunu alabilen biri olmak. Öğrenmeyi mezuniyetle bitirmemek.</p></details>
-    </div></section>
-
-    <section id="iletisim" class="contact" aria-labelledby="contact-title"><div class="contact-shade"></div><div class="wrap contact-content"><p class="eyebrow">04 / YOLLARIMIZ KESİŞSİN</p><h2 id="contact-title">Bir <em>merhaba,</em><br>yeni bir başlangıç.</h2><div class="contact-bottom"><p>Bir fikrin, bir sorun ya da sadece söyleyecek bir merhaban varsa,<br>GitHub profilim bir tık uzakta.</p><a href="https://github.com/kinaliemre" target="_blank" rel="noopener noreferrer">GitHub’da beni bul <span aria-hidden="true">↗</span></a></div></div></section>
-    <footer class="footer wrap"><a class="logo" href="#baslangic">EC<span>K.</span></a><span>EMRE CAN KINALI <span class="separator">/</span> <span id="year">2026</span></span><span class="footer-note">Hikâye devam ediyor.</span><a href="#baslangic">Yukarı <span aria-hidden="true">↑</span></a></footer>
-  </main>
+  </div>
 </body>
 </html>
