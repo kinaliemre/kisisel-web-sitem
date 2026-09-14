@@ -28,7 +28,7 @@ test('server serves pages but denies private files, invalid requests and writes'
     assert.equal(response.headers['x-content-type-options'], 'nosniff');
     assert.match(response.headers['content-security-policy'], /frame-ancestors 'none'/);
   }
-  for (const path of ['/.env', '/.git/config', '/.codex/config.toml', '/server.mjs', '/site-config.mjs', '/package.json', '/README.md', '/assets/PROMPTS.md', '/assets/arel-campus.png', '/assets/', '/%2e%2e/.git/config', '/..%2f.env', '/missing.html']) {
+  for (const path of ['/.env', '/.git/config', '/.codex/config.toml', '/server.mjs', '/site-config.mjs', '/package.json', '/README.md', '/assets/PROMPTS.md', '/assets/arel-campus.png', '/assets/', '/%2e%2e/.git/config', '/..%2f.env', '/missing.html', '/%252e%252e%252f.env', '/assets/../../.env', '/index.html.bak', '/index.html%00', '/.env?download=1']) {
     assert.equal((await request(path)).status, 404, path);
   }
   assert.equal((await request('//invalid/path')).status, 400);
@@ -63,9 +63,20 @@ test('publication output excludes development files and all local links resolve'
     assert.match(html, /http-equiv="Content-Security-Policy"/);
     assert.doesNotMatch(html, /(?:localhost|127\.0\.0\.1|file:\/\/|\/home\/)/);
     assert.doesNotMatch(html, /\son\w+\s*=|javascript:|<iframe|<form/i);
+    assert.doesNotMatch(html, /(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/);
+    for (const [anchor] of html.matchAll(/<a\b[^>]*>/g)) {
+      if (anchor.includes('target="_blank"')) {
+        assert.match(anchor, /rel="[^"]*\bnoopener\b/);
+        assert.match(anchor, /rel="[^"]*\bnoreferrer\b/);
+      }
+    }
+    for (const [script] of html.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/g)) {
+      assert.match(script, /^<script src="script\.js" defer><\/script>$/);
+    }
     for (const [, link] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
       if (link.startsWith('#')) {
         assert.ok(html.includes(`id="${link.slice(1)}"`), `${name}: ${link}`);
+
       } else if (!link.startsWith('https://')) {
         assert.ok(expected.includes(link), `${name}: ${link}`);
       }
@@ -73,4 +84,8 @@ test('publication output excludes development files and all local links resolve'
   }
   const css = await readFile(join(output, 'style.css'), 'utf8');
   for (const [, asset] of css.matchAll(/url\("([^"]+)"\)/g)) assert.ok(expected.includes(asset));
+  const home = join(temporary, 'index.html');
+  await writeFile(home, (await readFile(home, 'utf8')).replace('<meta charset="UTF-8">', ''));
+  assert.throws(() => execFileSync(process.execPath, ['build.mjs'], { cwd: temporary, stdio: 'pipe' }), /Güvenlik başlığı eklenemedi/);
+  assert.match(await readFile(join(output, 'index.html'), 'utf8'), /http-equiv="Content-Security-Policy"/, 'failed build preserves previous protected output');
 });

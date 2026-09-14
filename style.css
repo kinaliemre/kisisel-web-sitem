@@ -100,6 +100,14 @@ h3 { font-size: 25px; font-weight: 400; margin: 0; }
 .text-link { font-size: 18px; text-decoration-color: #596466; }
 .text-link:hover { text-decoration-color: #e1e3e3; }
 .text-link span { margin-left: 5px; }
+.contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.contact-link { display: flex; align-items: center; gap: 16px; min-height: 80px; padding: 20px; border: 1px solid #41494c; border-radius: 8px; background: #101416cc; text-decoration: none; font-size: 18px; transition: transform 180ms ease, border-color 180ms ease, background 180ms ease; }
+.contact-icon { width: 26px; height: 26px; flex-shrink: 0; }
+.contact-arrow { margin-left: auto; color: var(--muted); }
+.contact-link:hover { border-color: #7b898f; background: #192023; }
+@media (hover: hover) and (pointer: fine) { .contact-link:hover { transform: translateY(-3px); } }
+@media (max-width: 480px) { .contact-links { grid-template-columns: 1fr; gap: 12px; } }
+@media (prefers-reduced-motion: reduce) { .contact-link { transition: none; } .contact-link:hover { transform: none; } }
 .footer { max-width: 950px; margin-inline: auto; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 25px 0 35px; color: var(--muted); font-size: 16px; }
 @media (min-width: 1600px) { body::before { background-position: center 65%; } }
 @media (max-width: 700px) {
