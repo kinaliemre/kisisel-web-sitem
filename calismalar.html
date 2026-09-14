@@ -24,9 +24,74 @@
     </header>
 
     <main id="main">
-      <section id="calismalar" class="content-page" aria-labelledby="work-title">
+      <section id="calismalar" class="content-page work-page" aria-labelledby="work-title">
         <div class="section-label"><h1 id="work-title">Üzerinde çalıştıklarım</h1></div>
-        <div class="section-body"></div>
+        <p class="work-intro">Öğrendiklerimi uygulamaya döktüğüm projeler. Ayrıntıları görmek için bir kartı açabilirsin.</p>
+        <div class="work-list">
+          <details class="work-card" id="todo-app">
+            <summary>
+              <span class="work-card-top"><span class="work-name">TODO App</span><span class="work-actions"><span class="work-status is-done">Bitti</span><span class="work-toggle" aria-hidden="true"></span></span></span>
+              <span class="work-stack">JavaScript · Python · React · FastAPI</span>
+              <span class="work-preview"><span>Görevleri, tarihleri ve öncelikleri tek bir yerde toplayan kişisel planlama uygulaması.</span></span>
+            </summary>
+            <div class="work-detail">
+              <section><h2>Ne işe yarar, neden yaptım?</h2><p>Günlük işleri düzenlemeyi kolaylaştıran bir görev takip uygulaması. Görev ekleme, düzenleme, tamamlama ve silmenin yanında tarih, öncelik, etiket ve notlarla daha ayrıntılı planlama yapılabiliyor. Proje, bir arayüzü sunucu ve veritabanıyla birleştiren uçtan uca bir uygulama örneği.</p></section>
+              <section><h2>Kullandığım diller ve araçlar</h2><p>Arayüz JavaScript, React ve CSS ile hazırlanıyor; Vite geliştirme ortamını sağlıyor. Sunucu Python ve FastAPI kullanıyor. Verilere SQLAlchemy üzerinden erişiliyor; SQLite ve PostgreSQL bağlantısı destekleniyor.</p></section>
+              <section><h2>Nasıl çalışıyor?</h2><p>React bileşenleri görev listesi, takvim, arama ve profil gibi alanlara ayrılıyor. Arayüz, REST API üzerinden sunucuyla iletişim kuruyor. Görev sorguları oturumdaki kullanıcıya göre filtreleniyor; tarih doğrulaması ve dosya eki işlemleri sunucu tarafında yürütülüyor.</p></section>
+              <section><h2>Öne çıkanlar</h2><p>Durum, etiket, öncelik ve tarih aralığıyla filtreleme; görevlere dosya ekleme; takvim ve bildirim panelleri. Arayüz ile iş mantığının ayrılması, uygulamanın farklı parçalarını bağımsız geliştirmeyi kolaylaştırıyor.</p></section>
+              <section class="work-next"><h2>Nasıl geliştirilebilir?</h2><p>Çevrimdışı kullanım ve sonradan eşitleme, ortak görev listeleri ve otomatik hatırlatmalar eklenebilir. API ve kullanıcı akışı testleriyle değişikliklerin mevcut davranışları koruduğu doğrulanabilir.</p></section>
+              <a class="work-source" href="https://github.com/kinaliemre/TODO--APP" target="_blank" rel="noopener noreferrer">TODO App — GitHub’da incele <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+
+          <details class="work-card" id="airport-flight-management">
+            <summary>
+              <span class="work-card-top"><span class="work-name">Airport Flight Management System</span><span class="work-actions"><span class="work-status is-done">Bitti</span><span class="work-toggle" aria-hidden="true"></span></span></span>
+              <span class="work-stack">Python · Flask · SQLite · HTML / CSS</span>
+              <span class="work-preview"><span>Uçuşları, uçakları ve ekipleri yöneten; planlamadaki çakışmaları kontrol eden web uygulaması.</span></span>
+            </summary>
+            <div class="work-detail">
+              <section><h2>Ne işe yarar, neden yaptım?</h2><p>Havalimanı operasyonlarını örnekleyen çok kullanıcılı bir yönetim sistemi. Uçak, havalimanı, rota ve uçuş kayıtlarını bir araya getiriyor. Amaç, birbiriyle ilişkili verileri ve farklı kullanıcı rollerini somut bir iş akışı içinde ele almak.</p></section>
+              <section><h2>Kullandığım diller ve araçlar</h2><p>Sunucuda Python ve Flask, veri saklamada SQLite kullanılıyor. Sayfalar Jinja şablonlarıyla HTML olarak oluşturuluyor; görünüm CSS ile düzenleniyor. İş mantığı kontrolleri Python’un unittest modülüyle test ediliyor.</p></section>
+              <section><h2>Nasıl çalışıyor?</h2><p>Flask uygulama fabrikası ve Blueprint yapısı, başlangıç ayarlarını ve farklı sayfa gruplarını ayırıyor. İlişkisel veritabanı uçuşları pilot, uçak ve rotalarla bağlıyor. Planlama sırasında pilot ve uçak için zaman çakışmaları kontrol ediliyor.</p></section>
+              <section><h2>Öne çıkanlar</h2><p>Yönetici, pilot ve kabin ekibi rolleri; uçak kayıtlarında ekleme, görüntüleme, güncelleme ve silme; pilotların iptal talebi oluşturması ve yöneticinin bunları değerlendirmesi. Depoda giriş, kayıt ve uçuş çakışmaları için testler de bulunuyor.</p></section>
+              <section class="work-next"><h2>Nasıl geliştirilebilir?</h2><p>Uçuşları görsel bir takvimde planlama, değişiklik geçmişi ve ekip bildirimleri eklenebilir. Web sayfalarını da kapsayan entegrasyon testleri ve daha kapsamlı raporlama, projeyi bir adım ileri taşıyabilir.</p></section>
+              <a class="work-source" href="https://github.com/kinaliemre/Airport-Flight-Management-System" target="_blank" rel="noopener noreferrer">Uçuş yönetim sistemi — GitHub’da incele <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+
+          <details class="work-card" id="java-proje">
+            <summary>
+              <span class="work-card-top"><span class="work-name">JavaProje</span><span class="work-actions"><span class="work-status is-done">Bitti</span><span class="work-toggle" aria-hidden="true"></span></span></span>
+              <span class="work-stack">Java · CSV · JUnit 5</span>
+              <span class="work-preview"><span>Konsol üzerinden görev ve zaman takibi yapan, kayıtları CSV dosyalarında saklayan Java uygulaması.</span></span>
+            </summary>
+            <div class="work-detail">
+              <section><h2>Ne işe yarar, neden yaptım?</h2><p>Kullanıcı girişiyle çalışan bir konsol görev yöneticisi. Görev oluşturma, tamamlama, silme ve yaklaşan ya da geciken işleri listeleme işlemlerini bir menüde topluyor. Nesne yönelimli programlamayı, dosya işlemlerini ve zaman hesaplamalarını aynı uygulamada bir araya getiriyor.</p></section>
+              <section><h2>Kullandığım diller ve araçlar</h2><p>Uygulama Java ile yazıldı. Tarih ve saat işlemlerinde java.time, konsol girdilerinde Scanner kullanılıyor. Kullanıcılar ve görevler CSV dosyalarına kaydediliyor; sınıfların davranışları JUnit 5 testleriyle kontrol ediliyor.</p></section>
+              <section><h2>Nasıl çalışıyor?</h2><p>Kullanıcı, proje, görev, son tarih ve bildirim ayrı sınıflarla modelleniyor. TimeAsk sınıfı Task’tan kalıtım alarak başlangıç zamanı ve süre ekliyor. CSV repository sınıfları, verileri dosyaya yazma ve yeniden nesneye dönüştürme işini üstleniyor.</p></section>
+              <section><h2>Öne çıkanlar</h2><p>Kullanıcıya özel görev dosyaları, son tarihe göre sıralama ve menüden zamanı gelen bildirimleri kontrol etme. Görevler, tarihler ve CSV okuma-yazma davranışları için testler bulunması, küçük bir uygulamada test pratiğini görünür kılıyor.</p></section>
+              <section class="work-next"><h2>Nasıl geliştirilebilir?</h2><p>JavaFX ile görsel arayüz eklenebilir, CSV yerine veritabanı kullanılabilir. Bozuk dosya ve geçersiz tarih girişlerine karşı hata yönetimi genişletilebilir; bildirimler menüden kontrol etmek yerine otomatik gösterilebilir.</p></section>
+              <a class="work-source" href="https://github.com/kinaliemre/JavaProje" target="_blank" rel="noopener noreferrer">JavaProje — GitHub’da incele <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+
+          <details class="work-card" id="mixgame">
+            <summary>
+              <span class="work-card-top"><span class="work-name">MixGame</span><span class="work-actions"><span class="work-status is-active">Geliştiriliyor</span><span class="work-toggle" aria-hidden="true"></span></span></span>
+              <span class="work-stack">TypeScript · React · Vite · CSS</span>
+              <span class="work-preview"><span>101 Okey ile başlayan, farklı oyunları aynı çatı altında toplamayı hedefleyen web projesi.</span></span>
+            </summary>
+            <div class="work-detail">
+              <section><h2>Ne işe yarar, neden geliştiriyorum?</h2><p>Birden fazla oyuna tek bir uygulamadan ulaşılabilen bir oyun alanı oluşturuyorum. İlk odak 101 Okey. Oyun kurallarını kodla ifade etmek, etkileşimli bir masa hazırlamak ve sıra takibini yönetmek bu projenin merkezinde.</p></section>
+              <section><h2>Kullandığım diller ve araçlar</h2><p>TypeScript ve React ile geliştiriliyor; Vite geliştirme ve derleme sürecini sağlıyor. Masa ve taşların görünümü CSS ile hazırlanıyor. Taşlar ve oyun durumu TypeScript tipleriyle modelleniyor.</p></section>
+              <section><h2>Nasıl çalışıyor?</h2><p>Deste oluşturma, taşları karıştırma, dağıtma ve temel el analizi ayrı bir oyun mantığı dosyasında yer alıyor. Seri ve aynı sayı grupları hesaplanıyor; kullanılan taşlar Set ile takip edilerek aynı taşın tekrar seçilmesi önleniyor. React durumu, masa ve oyuncu etkileşimlerini ekrana yansıtıyor.</p></section>
+              <section><h2>Şu an neler var?</h2><p>101 masası, rastgele taş dağıtımı, gösterge ve okey hesabı, taş çekme-atma akışı ve bilgisayar oyuncularının sıraları var. Istaka düzenleme, seri ve çift gruplarını bulma üzerine de çalışılıyor. Proje henüz geliştirme aşamasında.</p></section>
+              <section class="work-next"><h2>Sırada neler olabilir?</h2><p>Kuralların tüm uç durumlarını test etmek, el analizini geliştirmek ve skor takibini genişletmek sonraki adımlar arasında. Gerçek zamanlı çok oyunculu bağlantı ve Sudoku ya da Batak gibi yeni oyunlar da uygulamayı büyütebilir.</p></section>
+              <a class="work-source" href="https://github.com/kinaliemre/MixGame" target="_blank" rel="noopener noreferrer">MixGame — GitHub’da incele <span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+        </div>
       </section>
     </main>
 
