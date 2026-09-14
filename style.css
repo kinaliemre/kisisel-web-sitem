@@ -179,6 +179,10 @@ nav a[aria-current="page"] { color: #f0f2f2; text-decoration: underline; text-de
 }
 .intro-quote figcaption { display: flex; align-items: center; gap: 14px; margin-top: 22px; color: #b9c2c5; font-size: 16px; letter-spacing: .04em; }
 .intro-quote figcaption::before { content: ""; width: 26px; height: 1px; background: #89979b; }
+.intro-socials { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+.intro-social-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #b9c2c5; border-radius: 6px; text-decoration: none; }
+.intro-social-link .contact-icon { width: 24px; height: 24px; }
+.intro-social-link:hover { color: #fff; background: #ffffff0a; }
 @media (max-width: 700px) {
   .intro-quote { margin-top: 42px; }
   .quote-break { display: none; }
