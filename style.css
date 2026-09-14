@@ -26,6 +26,25 @@ h2 { margin: 0; font-size: 27px; font-weight: 400; line-height: 1.5; }
 .now-note { border-left: 1px solid #4b5355; padding-left: 20px; margin-top: 26px; }
 .note-label { color: #e0e5e6; font-size: 17px; font-weight: 500; }
 .now-note p { margin: 5px 0 0; color: var(--muted); font-size: 18px; }
+.pinkod-card { margin-top: 24px; border: 1px solid #41494c; border-radius: 8px; background: #101416cc; }
+.pinkod-card summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 24px; cursor: pointer; list-style: none; border-radius: 8px; }
+.pinkod-card summary::-webkit-details-marker { display: none; }
+.pinkod-card summary:hover { background: #ffffff06; }
+.pinkod-card summary:focus-visible { outline: 2px solid #dbe4e6; outline-offset: 4px; }
+.pinkod-card-heading { display: grid; gap: 2px; }
+.pinkod-name { font-size: 23px; font-weight: 500; line-height: 1.4; }
+.pinkod-caption { color: var(--muted); font-size: 15px; }
+.pinkod-card-actions { display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
+.pinkod-card-actions .pinkod-status { line-height: 1.5; text-align: center; }
+.pinkod-toggle { position: relative; width: 18px; height: 18px; flex-shrink: 0; }
+.pinkod-toggle::before, .pinkod-toggle::after { content: ""; position: absolute; background: var(--muted); }
+.pinkod-toggle::before { width: 16px; height: 1px; left: 1px; top: 8px; }
+.pinkod-toggle::after { width: 1px; height: 16px; left: 8px; top: 1px; }
+.pinkod-card[open] .pinkod-toggle::after { display: none; }
+.pinkod-info { margin: 0 24px; padding: 18px 0 22px; border-top: 1px solid var(--line); }
+.pinkod-info p { margin: 0 0 14px; color: var(--muted); font-size: 17px; }
+.pinkod-info strong { display: block; color: var(--ink); font-weight: 500; }
+.pinkod-status { color: var(--muted); font-size: 13px; border: 1px solid #41494c; border-radius: 4px; padding: 4px 9px; }
 .project { display: block; text-decoration: none; padding-bottom: 23px; border-bottom: 1px solid var(--line); }
 .project-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 h3 { font-size: 25px; font-weight: 400; margin: 0; }
